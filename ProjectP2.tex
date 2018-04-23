@@ -151,6 +151,26 @@
 	
 	$$V_{Gp} = -5.2V$$
 	
+	\subsection{Calculating $R_D$}
+	We can now find $R_D$ using the values calculated.
+	
+	$$R_D = \frac{8 + 5.2}{.00025} \approx 53K \Omega$$
+	
+	\subsection{Current Source $\frac{W}{L}$}
+	Knowing that our $W/L$ for each of our branches results in a current of $250 \mu A$ and that it is related directly to current we can double $L$ to obtain an $I$ of $500\mu A$ This results in our current source NMOS to have a ration of $\frac{1}{4}$
+	
+	
+	\subsection{Circuit Design}
+	The final circuit design is as follows. 
+		\begin{figure}[h!]
+		\label{fig:amp}
+		\caption{Project: Part 2 Circuit Design}
+		\centering
+		\includegraphics[width=1\textwidth]{fullcircuit}
+	\end{figure}
+
+	Each NMOS and PMOS to the left of the cascoded amplifier acts to bias the corresponding MOSFETs on the right. This ensures that all MOSFETs operate in saturate to acheive a correct gain of $\approx 100K$
+	
 	
 	\section{Conclusion}
 	The project so far has been challenging but rewarding. In terms of progress so far, by chopping the assignment into pieces and individual circuits it made tackling the final circuit that much easier. The Differential amplifier using the given transistors does in fact work, which on its own is very satisfying. I look forward to continuing and completing the design.
