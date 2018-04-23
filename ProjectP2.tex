@@ -134,8 +134,7 @@
 	$$I_D = 250\mu A$$
 	
 	\subsection{Finding Biasing Voltage}
-	In order to ensure that all MOSFETs are operating in saturation, we need to find the gate voltage that will cause saturation. We must do this process for both NMOS and PMOS.
-	\subsubsection{NMOS Biasing Voltage} 
+	In order to ensure that all MOSFETs are operating in saturation, we need to find the gate voltage that will cause saturation.
 	Using the current equation 
 	$$I_D = \frac{1}{2} k_n (V_G -V_S - V_t)^2 (1 + \lambda V_{ds})$$
 	we can solve for $V_G$ using constants and deriving constants. For $V_{DS}$ we will use $V_g + 8$ and for $V_S$ we will use $8v$
@@ -143,37 +142,49 @@
 	$$250 \mu = \frac{1}{2} .001 (V_G + 7)^2 (1+.02(V_G + 8))$$
 	 Solving Through gives us 
 	 $$0 = .02V_G^3 + 1.44V_G^2 + 17.22V_G + 56.34$$
-	 $$V_G = -58, -6.3 , -7.7$$
+	 $$V_G = -58, -6.4 , -7.7$$
 	 
-	 The first value of $V_G$ $-58$ can be immediately disregarded from the extranous solutions due to its extreme variation from the normal values. From simulation the value arrived at is $$V_{Gn} = -6.3V$$ for the bottom biasing NMOS.
+	 The first value of $V_G$ $-58$ can be immediately disregarded from the extraneous solutions due to its extreme variation from the normal values. From simulation the value arrived at is $$V_{Gn} = -6.3V$$.
 	 
-	\subsubsection{PMOS Biasing Voltage}
+	 Since the all biasing MOSFETs are matched we can conclude that the drop across each will be roughly $1.7V$. 
+	 
 	
-	To find the PMOS biasing voltage we go through the same process but using our above value of $V_G$ as our $V_S$. Once resolved the value that we arrive at is
 	
-	$$V_{Gp} = -5.2V$$
+	
+	
 	
 	\subsection{Calculating $R_D$}
-	We can now find $R_D$ using the values calculated.
+	We can now find $R_D$ using the values calculated and by finding the voltage drop across the resistor. $VSS$ drops from $-8V$ to $-6.3V$ and then drops another $1.7V$ to $-4.6V$. From $8V$ to $-4.6V$ will be the drop across our resistor.
 	
-	$$R_D = \frac{8 + 5.2}{.00025} \approx 53K \Omega$$
+	$$R_D = \frac{8+4.6V}{.00025} \approx 50K \Omega$$
 	
 	\subsection{Current Source $\frac{W}{L}$}
-	Knowing that our $W/L$ for each of our branches results in a current of $250 \mu A$ and that it is related directly to current we can double $L$ to obtain an $I$ of $500\mu A$ This results in our current source NMOS to have a ratio of $\frac{4}{1}$
+	Knowing that our $W/L$ for each of our branches results in a current of $250 \mu A$ and that it is related directly to current we can double $\frac{W}{L}$ to obtain an $I$ of $500\mu A$ This results in our current source NMOS to have a ratio of $\frac{4}{1}$
 	
 	
 	\subsection{Circuit Design}
-	The final circuit design is as follows. 
+	The final circuit design is as follows.  A resistance value of $53k \Omega$ was used to obtain acceptable gain.
 		\begin{figure}[h!]
 		\label{fig:amp}
 		\caption{Project: Part 2 Circuit Design}
 		\centering
 		\includegraphics[width=1\textwidth]{fullcircuit}
 	\end{figure}
+\newpage
 
-	Each NMOS and PMOS to the left of the cascoded amplifier acts to bias the corresponding MOSFETs on the right. This ensures that all MOSFETs operate in saturation to acheive a correct gain of $\approx 10k$
+	Each NMOS and PMOS to the left of the cascoded amplifier acts to bias the corresponding MOSFETs on the right. This ensures that all MOSFETs operate in saturation to acheive a correct gain of $\approx 10,000$. These MOSFETs preform as predicted in section 3.3 with a drop of $1.7V$ after each subsequent MOSFET.
 	
-	The NMOS U3 in the figure when connected directly to the small-singal input causes convergence errors, its purpose is to create a biasing voltage for U7, the way that I solved this error is to apply the offset directly to the two input signal as seen in Figure 3. 
+	
+		\begin{figure}[h!]
+		\label{fig:amp}
+		\caption{Biasing Mosfets}
+		\centering
+		\includegraphics[width=.6\textwidth]{biasingdrop}
+	\end{figure}
+	
+	\newpage
+	
+	The NMOS U3 as seen in figure 3, when connected directly to the small-singal input causes convergence errors, its purpose is to create a biasing voltage for U7, the way that I solved this error is to apply the offset directly to the two input signal as seen in Figure 4. 
 	
 	
 	\begin{figure}
