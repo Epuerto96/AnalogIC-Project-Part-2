@@ -5,6 +5,8 @@
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
 
 \geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
 
@@ -171,7 +173,34 @@
 
 	Each NMOS and PMOS to the left of the cascoded amplifier acts to bias the corresponding MOSFETs on the right. This ensures that all MOSFETs operate in saturate to acheive a correct gain of $\approx 100K$
 	
+	The NMOS U3 in the figure when connected directly to the small-singal input causes convergence errors, its purpose is to create a biasing voltage for U7, the way that I solved this error is to apply the offset directly to the two input signal as seen in Figure 3. 
 	
+	
+	\begin{figure}
+		\centering
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{positivebias}
+			\caption{Positive Offset}
+			\label{fig:sub1}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{negativebias}
+			\caption{Negative Offset}
+			\label{fig:sub2}
+		\end{subfigure}
+		\caption{Offsetting input voltages}
+		\label{fig:test}
+	\end{figure}
+	
+	\section{Single-Ended Output }
+	Now that we have cascoded out amplifier successfully we can continue our design process to now add another amplifier with a gain of $10$ to a single ended output.
+	
+	We must also keep in mind that this amplifier because it is single-ended must produce a gain of $20$ that will be reduced by half.
+	
+	
+
 	\section{Conclusion}
 	The project so far has been challenging but rewarding. In terms of progress so far, by chopping the assignment into pieces and individual circuits it made tackling the final circuit that much easier. The Differential amplifier using the given transistors does in fact work, which on its own is very satisfying. I look forward to continuing and completing the design.
 	
