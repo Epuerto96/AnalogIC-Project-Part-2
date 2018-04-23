@@ -98,7 +98,7 @@
 	\section{Double ended Cascoded Amplifier}
 	To design an amplifier to work in a cascoded configuration we must calculate several values, including biasing voltages, drain current, and a new resistance value.
 	\subsection{Gain Equation}
-	Be fore we can start solving for other parts of the circuit we need to go ahead and find a equation for the gain of our circuit. From the book we can see that the gain can be obtained by the differential-half circuit of the cascoded amplifier, it is as follows
+	Before we can start solving for other parts of the circuit we need to go ahead and find a equation for the gain of our circuit. From the book we can see that the gain can be obtained by the differential-half circuit of the cascoded amplifier, it is as follows
 	
 	$$A_d \equiv \frac{V_{od}}{V_{id}} = g_{m1} (R_{on}|| R_{op})$$
 	
@@ -109,7 +109,7 @@
 	
 	with those equations and our equation for transconductance 
 	$$g_{m} = \sqrt{2 k_n I_D}$$
-	we can begin to solve for $A_D$
+	we can begin to solve for $A_D$ knowing that all mosfets have the same parameters.
 	
 	$$R_{on} =\frac{1}{\lambda I_D} \frac{1}{\lambda I_D} g_m$$
 	$$R_{on} = \frac{1}{\lambda^2 I_D^2} g_m$$
@@ -122,12 +122,12 @@
 	$$A_d = \frac{1}{2} \frac{1}{\lambda^2 I_D^2} \sqrt{2 k_n I_D} \sqrt{2 k_n I_D}$$
 	which simplifies to our gain equation,
 	
-	$$A_d  = \frac{K_n}{\lambda^2 I_D}$$
+	$$A_d  = \frac{k_n}{\lambda^2 I_D}$$
 	
 	\subsection{Calculating Drain Current $I_d$}
 	With the given constants $k_n = k_p = .5m$ and $\lambda = .02$ we can effectively solve for $I_D$ using the gain equation and $A_d = 10000$
 	
-	$$A_d  = \frac{K_n}{\lambda^2 I_D}$$
+	$$A_d  = \frac{k_n}{\lambda^2 I_D}$$
 	
 	
 	
@@ -145,7 +145,7 @@
 	 $$0 = .02V_G^3 + 1.44V_G^2 + 17.22V_G + 56.34$$
 	 $$V_G = -58, -6.3 , -7.7$$
 	 
-	 The first value of $V_G$ $-58$ can be immediately disregarded from the extranous solutions due to its extreme variation from the normal values. From simulation the value arrived at is $$V_{Gn} = -6.3V$$
+	 The first value of $V_G$ $-58$ can be immediately disregarded from the extranous solutions due to its extreme variation from the normal values. From simulation the value arrived at is $$V_{Gn} = -6.3V$$ for the bottom biasing NMOS.
 	 
 	\subsubsection{PMOS Biasing Voltage}
 	
@@ -159,7 +159,7 @@
 	$$R_D = \frac{8 + 5.2}{.00025} \approx 53K \Omega$$
 	
 	\subsection{Current Source $\frac{W}{L}$}
-	Knowing that our $W/L$ for each of our branches results in a current of $250 \mu A$ and that it is related directly to current we can double $L$ to obtain an $I$ of $500\mu A$ This results in our current source NMOS to have a ration of $\frac{1}{4}$
+	Knowing that our $W/L$ for each of our branches results in a current of $250 \mu A$ and that it is related directly to current we can double $L$ to obtain an $I$ of $500\mu A$ This results in our current source NMOS to have a ratio of $\frac{4}{1}$
 	
 	
 	\subsection{Circuit Design}
@@ -171,7 +171,7 @@
 		\includegraphics[width=1\textwidth]{fullcircuit}
 	\end{figure}
 
-	Each NMOS and PMOS to the left of the cascoded amplifier acts to bias the corresponding MOSFETs on the right. This ensures that all MOSFETs operate in saturate to acheive a correct gain of $\approx 100K$
+	Each NMOS and PMOS to the left of the cascoded amplifier acts to bias the corresponding MOSFETs on the right. This ensures that all MOSFETs operate in saturation to acheive a correct gain of $\approx 10k$
 	
 	The NMOS U3 in the figure when connected directly to the small-singal input causes convergence errors, its purpose is to create a biasing voltage for U7, the way that I solved this error is to apply the offset directly to the two input signal as seen in Figure 3. 
 	

@@ -10,7 +10,7 @@
 \contentsline {subsection}{\numberline {3.3}Finding Biasing Voltage}{5}{subsection.3.3}
 \contentsline {subsubsection}{\numberline {3.3.1}NMOS Biasing Voltage}{5}{subsubsection.3.3.1}
 \contentsline {subsubsection}{\numberline {3.3.2}PMOS Biasing Voltage}{5}{subsubsection.3.3.2}
-\contentsline {subsection}{\numberline {3.4}Calculating $R_D$}{5}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.4}Calculating $R_D$}{6}{subsection.3.4}
 \contentsline {subsection}{\numberline {3.5}Current Source $\frac {W}{L}$}{6}{subsection.3.5}
 \contentsline {subsection}{\numberline {3.6}Circuit Design}{6}{subsection.3.6}
 \contentsline {section}{\numberline {4}Single-Ended Output }{7}{section.4}
