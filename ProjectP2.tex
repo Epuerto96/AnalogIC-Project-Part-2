@@ -175,15 +175,15 @@
 	Each NMOS and PMOS to the left of the cascoded amplifier acts to bias the corresponding MOSFETs on the right. This ensures that all MOSFETs operate in saturation to acheive a correct gain of $\approx 10,000$. These MOSFETs preform as predicted in section 3.3 with a drop of $1.7V$ after each subsequent MOSFET.
 	
 	
-		\begin{figure}[h!]
+	\begin{figure}[h!]
 		\label{fig:amp}
 		\caption{Biasing Mosfets}
 		\centering
-		\includegraphics[width=.6\textwidth]{biasingdrop}
+		\includegraphics[width=.4\textwidth]{biasingdrop}
 	\end{figure}
 	
+
 	\newpage
-	
 	The NMOS U3 as seen in figure 3, when connected directly to the small-singal input causes convergence errors, its purpose is to create a biasing voltage for U7, the way that I solved this error is to apply the offset directly to the two input signal as seen in Figure 4. 
 	
 	
@@ -205,15 +205,34 @@
 		\label{fig:test}
 	\end{figure}
 	
+	\newpage
 	\section{Single-Ended Output }
-	Now that we have cascoded out amplifier successfully we can continue our design process to now add another amplifier with a gain of $10$ to a single ended output.
+	Now that we have cascoded our amplifier successfully we can continue our design process to now add another amplifier with a gain of $10$ to a single ended output.
 	
 	We must also keep in mind that this amplifier because it is single-ended must produce a gain of $20$ that will be reduced by half.
+	
+	The following figure is the designed amplifier with the Single-ended Output.
+	
+	\begin{figure}[h!]
+		\label{fig:amp}
+		\caption{Single-Ended Output Amplifier}
+		\centering
+		\includegraphics[width=1\textwidth]{fullstage2}
+	\end{figure}
+	
+	\newpage
+	The gain produced by this circuit can be seen in the following.
+	\begin{figure}[h!]
+	\label{fig:amp}
+	\caption{Single-Ended Output Amplifier}
+	\centering
+	\includegraphics[width=.5\textwidth]{stage2}
+	\end{figure}	
 	
 	
 
 	\section{Conclusion}
-	The project so far has been challenging but rewarding. In terms of progress so far, by chopping the assignment into pieces and individual circuits it made tackling the final circuit that much easier. The Differential amplifier using the given transistors does in fact work, which on its own is very satisfying. I look forward to continuing and completing the design.
+	The project so far has been challenging but rewarding. By chopping the assignment into pieces and individual circuits it made tackling the final circuit significantly easier. Im am very proud that the final circuit that does in fact meets all requirements set forth. The tackling of this project help solidify my understanding of not only MOSFETs but also engineering design as a whole.
 	
 	
 	

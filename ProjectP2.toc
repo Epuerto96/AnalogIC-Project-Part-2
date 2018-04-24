@@ -11,5 +11,5 @@
 \contentsline {subsection}{\numberline {3.4}Calculating $R_D$}{5}{subsection.3.4}
 \contentsline {subsection}{\numberline {3.5}Current Source $\frac {W}{L}$}{6}{subsection.3.5}
 \contentsline {subsection}{\numberline {3.6}Circuit Design}{6}{subsection.3.6}
-\contentsline {section}{\numberline {4}Single-Ended Output }{8}{section.4}
-\contentsline {section}{\numberline {5}Conclusion}{8}{section.5}
+\contentsline {section}{\numberline {4}Single-Ended Output }{9}{section.4}
+\contentsline {section}{\numberline {5}Conclusion}{10}{section.5}
