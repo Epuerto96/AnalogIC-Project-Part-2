@@ -8,10 +8,8 @@
 \BOOKMARK [2][-]{subsection.3.1}{Gain Equation}{section.3}% 8
 \BOOKMARK [2][-]{subsection.3.2}{Calculating Drain Current Id}{section.3}% 9
 \BOOKMARK [2][-]{subsection.3.3}{Finding Biasing Voltage}{section.3}% 10
-\BOOKMARK [3][-]{subsubsection.3.3.1}{NMOS Biasing Voltage}{subsection.3.3}% 11
-\BOOKMARK [3][-]{subsubsection.3.3.2}{PMOS Biasing Voltage}{subsection.3.3}% 12
-\BOOKMARK [2][-]{subsection.3.4}{Calculating RD}{section.3}% 13
-\BOOKMARK [2][-]{subsection.3.5}{Current Source WL}{section.3}% 14
-\BOOKMARK [2][-]{subsection.3.6}{Circuit Design}{section.3}% 15
-\BOOKMARK [1][-]{section.4}{Single-Ended Output }{}% 16
-\BOOKMARK [1][-]{section.5}{Conclusion}{}% 17
+\BOOKMARK [2][-]{subsection.3.4}{Calculating RD}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.5}{Current Source WL}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.6}{Circuit Design}{section.3}% 13
+\BOOKMARK [1][-]{section.4}{Single-Ended Output }{}% 14
+\BOOKMARK [1][-]{section.5}{Conclusion}{}% 15
